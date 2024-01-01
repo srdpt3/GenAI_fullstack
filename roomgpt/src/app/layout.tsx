@@ -4,6 +4,8 @@ import './globals.css'
 import couch from '@/assets/couch.svg'
 import Link from 'next/link'
 import  Image from 'next/image'
+import { ClerkProvider } from '@clerk/nextjs'
+import UserInfo from '@/components/UserInfo'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,15 +19,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className + " bg-[#7181c] flex flex-col min-h-screen"}>
+    <ClerkProvider>
+      <html lang="en">
+      <body className={inter.className + " bg-[#17181c] flex flex-col min-h-screen"}>
         <header className='w-full'>
-          <div><Link href={'/'} className='flex items-center gap-3'>
-            <Image src={couch} width={100} height={100} ></Image>
-          </Link></div>
+          <div className='container border-b p-5 mx-auto flex items-center justify-between'>
+            <Link href={'/'} className='flex items-center gap-3'>
+                <Image src={couch} width={100} height={100} alt="couch"></Image>
+                <h3 className='text-white md:text-3xl text-2xl font-bold'>AI Interior</h3>
+            </Link>
+              {/* User Info Component */}
+              <UserInfo></UserInfo>
+          </div>
         </header>
-        
+
         {children}</body>
-    </html>
+      </html>
+    </ClerkProvider>
   )
 }
