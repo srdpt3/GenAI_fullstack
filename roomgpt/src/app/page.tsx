@@ -1,7 +1,23 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main></main>
-  )
+    <main>
+      <div>
+        <h1 className="text-white text-5xl font-bold text-center">Redesign your room{" "}
+          <span className="text-blue-700">with AI</span></h1>
+        <p className="text-gray-500 text-lg text-center">
+          Take a picture of a room and instantly redesign it in 8+ diffenrent
+          themes. Join thousands of happy customers and remodel your room today!
+        </p>
+        <Link href={"/room"}>
+          <button className="bg-blue-500 hover:opacity-90 rounded-lg text-white font-semibold px-5 py-3">
+            Redesign your room 
+          </button>
+        </Link>
+
+      </div>
+    </main>
+  );
 }
