@@ -1,11 +1,13 @@
+import CompareSlider from "@/components/CompareSlider";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <h1 className="text-white text-5xl font-bold text-center">Redesign your room{" "}
+   <main className="my-auto flex gap-10 p-11 lg:flex-row flex-col justify-center lg:justify-around items-center">
+      <div className="flex relative max-w-xl flex-col items-center gap-5 gradiant-bg">
+        <h1 className="text-white text-5xl font-bold text-center ">
+          Redesign your room{" "}
           <span className="text-blue-700">with AI</span></h1>
         <p className="text-gray-500 text-lg text-center">
           Take a picture of a room and instantly redesign it in 8+ diffenrent
@@ -17,6 +19,9 @@ export default function Home() {
           </button>
         </Link>
 
+      </div>
+      <div>
+        <CompareSlider/>
       </div>
     </main>
   );
