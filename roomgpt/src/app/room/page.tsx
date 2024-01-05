@@ -1,7 +1,7 @@
-import GenerateBtn from '@/components/GenerateBtn'
-import PreviewImg from '@/components/PreviewImg'
-import SelectInp from '@/components/SelectInp'
-import ThemeOptions from '@/components/ThemeOptions'
+// import GenerateBtn from '@/components/GenerateBtn'
+// import PreviewImg from '@/components/PreviewImg'
+// import SelectInp from '@/components/SelectInp'
+// import ThemeOptions from '@/components/ThemeOptions'
 import UploadDnd from '@/components/UploadDnd'
 import React from 'react'
 
